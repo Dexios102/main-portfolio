@@ -15,11 +15,11 @@ const App = () => {
       minWidth: 200.0,
       scale: 1.0,
       scaleMobile: 1.0,
-      color: 0xaa1c1c,
+      color: 0xbf0603,
       backgroundColor: 0xffffff,
-      points: 5.0,
-      maxDistance: 24.0,
-      spacing: 16.0,
+      points: 6.0,
+      maxDistance: 23.0,
+      spacing: 15.0,
     });
 
     return () => {
