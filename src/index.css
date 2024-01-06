@@ -9,8 +9,14 @@
   --tertiary: #000000;
   --bg-color: #fff;
 }
-body {
-  background-color: var(--bg-color);
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 30rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .gradient-text {
@@ -112,11 +118,11 @@ body {
   }
 
   25% {
-    transform: rotate(-10deg);
+    transform: rotate(-30deg);
   }
 
   75% {
-    transform: rotate(10deg);
+    transform: rotate(50deg);
   }
 
   100% {
