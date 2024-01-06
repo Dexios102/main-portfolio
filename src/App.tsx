@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import NET from "vanta/dist/vanta.net.min";
+import HeroPage from "./pages/HeroPage";
 
 const App = () => {
   const background = useRef(null);
@@ -34,6 +35,9 @@ const App = () => {
       <div className="bg" ref={background}></div>
       <div className="mx-32">
         <Navbar />
+        <div className="px-4">
+          <HeroPage />
+        </div>
       </div>
     </div>
   );

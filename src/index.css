@@ -19,6 +19,14 @@
   z-index: -1;
 }
 
+.h1 {
+  @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-bold;
+}
+
+p {
+  @apply leading-[1.8] text-black font-light text-lg;
+}
+
 .gradient-text {
   @apply bg-gradient-to-r from-red-500 via-red-400
    to-rose-800 bg-clip-text inline-block text-transparent;
@@ -140,4 +148,58 @@
 
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+.download-button {
+  font-family: inherit;
+  font-size: 20px;
+  background: rgb(192, 34, 23);
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.download-button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.download-button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.download-button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.download-button:hover span {
+  transform: translateX(5em);
+}
+
+.download-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
 }
