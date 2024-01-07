@@ -23,7 +23,7 @@ const HeroPage = () => {
                     1000,
                     "Freelancer",
                     1000,
-                    "BS Information Techonology Graduate🎓",
+                    "BSIT Graduate🎓",
                     1000,
                   ]}
                   wrapper="span"
