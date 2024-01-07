@@ -1,6 +1,7 @@
 /* Imports */
 import { FaHome, FaMailBulk, FaUserCircle } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -16,28 +17,36 @@ const Navbar = () => {
       shadow-lg shadow-gray-400"
       >
         <li>
-          <div className="group nav-info">
-            <FaHome className="icons-hover" />
-            <span className="group-hover:scale-100">Home</span>
-          </div>
+          <Link to="/">
+            <div className="group nav-info">
+              <FaHome className="icons-hover" />
+              <span className="group-hover:scale-100">Home</span>
+            </div>
+          </Link>
         </li>
         <li>
-          <div className="group nav-info">
-            <FaUserCircle className="icons-hover" />
-            <span className="group-hover:scale-100">About</span>
-          </div>
+          <Link to="/about">
+            <div className="group nav-info">
+              <FaUserCircle className="icons-hover" />
+              <span className="group-hover:scale-100">About</span>
+            </div>
+          </Link>
         </li>
         <li>
-          <div className="group nav-info">
-            <MdOutlineWork className="icons-hover" />
-            <span className="group-hover:scale-100">Projects</span>
-          </div>
+          <Link to="/projects">
+            <div className="group nav-info">
+              <MdOutlineWork className="icons-hover" />
+              <span className="group-hover:scale-100">Projects</span>
+            </div>
+          </Link>
         </li>
         <li>
-          <div className="group nav-info">
-            <FaMailBulk className="icons-hover" />
-            <span className="group-hover:scale-100">Contact</span>
-          </div>
+          <Link to="/contact">
+            <div className="group nav-info">
+              <FaMailBulk className="icons-hover" />
+              <span className="group-hover:scale-100">Contact</span>
+            </div>
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
 import HeroPage from "./pages/HeroPage";
 import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 const App = () => {
   const background = useRef(null);
@@ -41,6 +44,9 @@ const App = () => {
         <div className="px-4">
           <Routes>
             <Route path="/" element={<HeroPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>
       </div>
