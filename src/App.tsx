@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { isMobile } from "react-device-detect";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
@@ -9,8 +10,10 @@ import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import Transitions from "./components/Transitions";
 
 const App = () => {
+  const location = useLocation();
   const background = useRef(null);
 
   useEffect(() => {
@@ -40,18 +43,21 @@ const App = () => {
   return (
     <div className="app">
       <div className="bg" ref={background}></div>
-      <div className="xl:mx-32">
-        <Header />
-        <Navbar />
-        <div className="px-4">
-          <Routes>
-            <Route path="/" element={<HeroPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+      <AnimatePresence mode="wait">
+        <div className="xl:mx-32">
+          <Header />
+          <Navbar />
+          <motion.div className="px-4">
+            <Transitions />
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<HeroPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </motion.div>
         </div>
-      </div>
+      </AnimatePresence>
     </div>
   );
 };
