@@ -1,63 +1,45 @@
-import facebook from "../assets/facebook.svg";
-import github from "../assets/github.svg";
-import instagram from "../assets/instagram.png";
-import linkedin from "../assets/linkedin.svg";
-import x from "../assets/x.png";
-import ThemeMode from "./ThemeMode";
+/* Imports */
+import { FaHome, FaMailBulk, FaUserCircle } from "react-icons/fa";
+import { MdOutlineWork } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center py-6 px-4">
-      {/* Menu */}
+    <nav
+      className="flex flex-col xl:justify-center gap-y-4 fixed h-max bottom-4 
+      xl:bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen
+      xl:px-0 px-14"
+    >
       <ul
-        className="flex items-center gap-8 text-xl font-semibold
-      tracking-wide"
+        className="w-full flex xl:flex-col items-center justify-between
+      xl:justify-center gap-y-10 px-10 md:px-40 xl:px-0 h-8 bg-red-800
+      xl:h-max py-6 backdrop-blur-sm text-2xl xl:text-xl rounded-full text-white
+      shadow-lg shadow-gray-400"
       >
-        <li className="nav-pages">Home</li>
-        <li className="nav-pages">About</li>
-        <li className="nav-pages">Projects</li>
-        <li className="nav-pages">Contact</li>
+        <li>
+          <div className="group nav-info">
+            <FaHome className="icons-hover" />
+            <span className="group-hover:scale-100">Home</span>
+          </div>
+        </li>
+        <li>
+          <div className="group nav-info">
+            <FaUserCircle className="icons-hover" />
+            <span className="group-hover:scale-100">About</span>
+          </div>
+        </li>
+        <li>
+          <div className="group nav-info">
+            <MdOutlineWork className="icons-hover" />
+            <span className="group-hover:scale-100">Projects</span>
+          </div>
+        </li>
+        <li>
+          <div className="group nav-info">
+            <FaMailBulk className="icons-hover" />
+            <span className="group-hover:scale-100">Contact</span>
+          </div>
+        </li>
       </ul>
-      {/* Logo */}
-      <div className="text-3xl font-extrabold tracking-wide">
-        <h1 className="gradient-text">Dexios.dev</h1>
-      </div>
-      {/* Social Links */}
-      <div className="flex gap-6 items-center">
-        <ul className="flex gap-4 items-center">
-          <li>
-            <img
-              src={facebook}
-              alt="facebook_icon"
-              className="w-10 h-10 icons"
-            />
-          </li>
-          <li>
-            <img
-              src={instagram}
-              alt="instagram_icon"
-              className="w-9 h-9 icons"
-            />
-          </li>
-          <li>
-            <img src={github} alt="github_icon" className="w-10 h-10 icons" />
-          </li>
-          <li>
-            <img
-              src={linkedin}
-              alt="linkedin_icon"
-              className="w-10 h-10 icons"
-            />
-          </li>
-          <li>
-            <img src={x} alt="x_icon" className="w-9 h-9 icons" />
-          </li>
-        </ul>
-        {/* Theme Toggle */}
-        <div>
-          <ThemeMode />
-        </div>
-      </div>
     </nav>
   );
 };
