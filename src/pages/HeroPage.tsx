@@ -8,7 +8,7 @@ const HeroPage = () => {
     <div className="h-full">
       <div className="w-full h-full">
         <div
-          className="pt-20 text-center flex flex-col justify-center xl:pt-40
+          className="pt-10 text-center flex flex-col justify-center xl:pt-40
         xl:text-left h-full container mx-auto"
         >
           <div className="pl-2 mb-2">
