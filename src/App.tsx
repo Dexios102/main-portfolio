@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
 import HeroPage from "./pages/HeroPage";
@@ -38,7 +39,9 @@ const App = () => {
         <Header />
         <Navbar />
         <div className="px-4">
-          <HeroPage />
+          <Routes>
+            <Route path="/" element={<HeroPage />} />
+          </Routes>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import facebook from "../assets/facebook.svg";
 import github from "../assets/github.svg";
@@ -19,7 +20,9 @@ const Header = () => {
         className="text-2xl md:text-3xl font-extrabold tracking-wide
       cursor-pointer"
       >
-        <h1 className="gradient-text">Dexios.dev</h1>
+        <Link to="/">
+          <h1 className="gradient-text">Dexios.dev</h1>
+        </Link>
       </div>
 
       {/* Hamburger Menu Icon */}

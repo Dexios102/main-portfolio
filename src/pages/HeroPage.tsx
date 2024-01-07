@@ -14,7 +14,7 @@ const HeroPage = () => {
           <div className="pl-2 mb-2">
             <h2 className="xl:border-l-4 border-red-600 xl:pl-2">
               Hello👋🏻, I'm <br className="xl:hidden" />
-              <span className="text-lg font-semibold text-red-600">
+              <span className="text-medium font-semibold text-red-600">
                 <TypeAnimation
                   sequence={[
                     "Dexter Dave Cajayon",
@@ -27,7 +27,8 @@ const HeroPage = () => {
                     1000,
                   ]}
                   wrapper="span"
-                  speed={30}
+                  speed={40}
+                  deletionSpeed={80}
                   style={{ display: "inline-block" }}
                   repeat={Infinity}
                 />
