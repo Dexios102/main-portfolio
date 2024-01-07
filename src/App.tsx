@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
+import { isMobile } from "react-device-detect";
+
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
 import HeroPage from "./pages/HeroPage";
@@ -23,9 +25,9 @@ const App = () => {
       scaleMobile: 1.0,
       color: 0xbf0603,
       backgroundColor: 0xffffff,
-      points: 6.0,
-      maxDistance: 23.0,
-      spacing: 15.0,
+      points: isMobile ? 6.5 : 7.0,
+      maxDistance: isMobile ? 18.0 : 22.0,
+      spacing: isMobile ? 18.0 : 15.0,
     });
 
     return () => {
