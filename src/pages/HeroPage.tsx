@@ -13,7 +13,7 @@ const HeroPage = () => {
         >
           <div className="pl-2 mb-2">
             <h2 className="xl:border-l-4 border-red-600 xl:pl-2">
-              Hello👋🏻, I'm <br className="xl:hidden" />
+              Hello👋🏻, I'm
               <span className="text-medium font-semibold text-red-600">
                 <TypeAnimation
                   sequence={[
