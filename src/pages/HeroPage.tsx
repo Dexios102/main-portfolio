@@ -23,7 +23,7 @@ const HeroPage = () => {
                     1000,
                     "Freelancer",
                     1000,
-                    "BS Information Techonoly Graduate 🎓",
+                    "BS Information Techonology Graduate🎓",
                     1000,
                   ]}
                   wrapper="span"
@@ -42,9 +42,9 @@ const HeroPage = () => {
           <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12">
             In the dynamic world of web development, I specialize in crafting
             seamless front-end experiences and robust back-end functionalities.
-            Proficient in HTML, CSS, JavaScript, React.js, Node/Express.js, and
-            Laravel, I ensure visually appealing and high-performing websites.
-            Let's shape the future of the web together!
+            Proficient in HTML, CSS, JavaScript, TypeScript, React.js and
+            Node/Express.js, I ensure visually appealing and high-performing
+            websites. Let's shape the future of the web together!
           </p>
           <div className="flex items-center justify-center gap-4 xl:justify-start">
             <DownloadButton />
