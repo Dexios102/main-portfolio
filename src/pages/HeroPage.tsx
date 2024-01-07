@@ -1,24 +1,51 @@
 import DownloadButton from "../components/DownloadButton";
 import { MdConnectWithoutContact } from "react-icons/md";
 
+import { TypeAnimation } from "react-type-animation";
+
 const HeroPage = () => {
   return (
     <div className="h-full">
       <div className="w-full h-full">
         <div
-          className="text-center flex flex-col justify-center xl:pt-60
+          className="pt-20 text-center flex flex-col justify-center xl:pt-40
         xl:text-left h-full container mx-auto"
         >
+          <div className="pl-2 mb-2">
+            <h2 className="xl:border-l-4 border-red-600 xl:pl-2">
+              Hello👋🏻, I'm <br className="xl:hidden" />
+              <span className="text-lg font-semibold text-red-600">
+                <TypeAnimation
+                  sequence={[
+                    "Dexter Dave Cajayon",
+                    1000,
+                    "Full Stack Developer",
+                    1000,
+                    "Freelancer",
+                    1000,
+                    "BS Information Techonoly Graduate 🎓",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={30}
+                  style={{ display: "inline-block" }}
+                  repeat={Infinity}
+                />
+              </span>
+            </h2>
+          </div>
           <h1 className="h1">
-            Transforming Visions <br /> Into{" "}
-            <span className="gradient-text">Digital Realities</span>{" "}
+            Crafting Tomorrow's <br />
+            <span className="gradient-text">Digital Presence</span>{" "}
           </h1>
           <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus incidunt veniam pariatur fugiat assumenda eaque qui,
-            atque nihil cupiditate inventore?
+            In the dynamic world of web development, I specialize in crafting
+            seamless front-end experiences and robust back-end functionalities.
+            Proficient in HTML, CSS, JavaScript, React.js, Node/Express.js, and
+            Laravel, I ensure visually appealing and high-performing websites.
+            Let's shape the future of the web together!
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4 xl:justify-start">
             <DownloadButton />
             <button
               className="relative inline-flex items-center justify-center p-0.5
