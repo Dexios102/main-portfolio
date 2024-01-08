@@ -20,3 +20,24 @@ export const fadeIn = (direction: string, delay: number) => {
     },
   };
 };
+
+/* Framer Motion Variants */
+
+/* ScaleUp Variant */
+export const scaleUp = (delay: number) => {
+  return {
+    hidden: {
+      scale: 0,
+    },
+    show: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1.2,
+        delay: delay,
+        ease: [0.25, 0.25, 0.25, 0.75],
+      },
+    },
+  };
+};
