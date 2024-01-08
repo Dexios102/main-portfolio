@@ -2,8 +2,24 @@ import DownloadButton from "../components/DownloadButton";
 import { MdConnectWithoutContact } from "react-icons/md";
 
 import { TypeAnimation } from "react-type-animation";
+import Abstract from "../assets/abstract.png";
+import JSlogo from "../assets/javascript-logo.svg";
+import typescript from "../assets/typescript.svg";
+import nodejs from "../assets/node-js.svg";
+import github from "../assets/github.svg";
+import react from "../assets/react.svg";
+import mongodb from "../assets/mongodb.svg";
 
 const HeroPage = () => {
+  const icons = [
+    { src: JSlogo, alt: "JavaScript Logo" },
+    { src: typescript, alt: "TypeScript Logo" },
+    { src: nodejs, alt: "Node.js Logo" },
+    { src: react, alt: "React.js Logo" },
+    { src: github, alt: "Git.js Logo" },
+    { src: mongodb, alt: "MongoDB.js Logo" },
+  ];
+
   return (
     <div className="h-full">
       <div className="w-full h-full">
@@ -63,6 +79,28 @@ const HeroPage = () => {
                 Hire Me
               </span>
             </button>
+          </div>
+        </div>
+        <div
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute xl:top-[250px]
+         xl:right-40 cloud overflow-hidden top-0 right-0"
+        >
+          <div className="hidden xl:flex xl:max-w-none">
+            <img
+              src={Abstract}
+              alt="abstract"
+              className="w-full max-w-[800px]"
+            />
+          </div>
+          <div className="circle">
+            {icons.map((icon, index) => (
+              <img
+                key={index}
+                src={icon.src}
+                alt={icon.alt}
+                className={`circle__icon circle__icon--${index}`}
+              />
+            ))}
           </div>
         </div>
       </div>
