@@ -20,7 +20,7 @@
   z-index: -1;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .bg {
     left: 0;
     top: 22rem;
@@ -228,5 +228,74 @@ p {
 
   to {
     transform: translateY(-0.1em);
+  }
+}
+
+.circle {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  margin: 40px auto;
+  animation: spin 5s linear infinite;
+  z-index: -1;
+  bottom: 32rem;
+}
+
+.circle__icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1280px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    bottom: 15rem;
+  }
+  .circle__icon {
+    width: 50px;
+    height: 50px;
+  }
+  .circle__icon--0,
+  .circle__icon--1,
+  .circle__icon--2,
+  .circle__icon--3,
+  .circle__icon--4,
+  .circle__icon--5 {
+    transform: translate(-50%, 0);
+  }
+}
+
+.circle__icon--0 {
+  transform: translate(-50%, -50%) rotate(0deg) translate(250px) rotate(0deg);
+}
+.circle__icon--1 {
+  transform: translate(-50%, -50%) rotate(60deg) translate(250px) rotate(0deg);
+}
+.circle__icon--2 {
+  transform: translate(-50%, -50%) rotate(120deg) translate(250px) rotate(0deg);
+}
+.circle__icon--3 {
+  transform: translate(-50%, -50%) rotate(180deg) translate(250px) rotate(0deg);
+}
+.circle__icon--4 {
+  transform: translate(-50%, -50%) rotate(240deg) translate(250px) rotate(0deg);
+}
+.circle__icon--5 {
+  transform: translate(-50%, -50%) rotate(300deg) translate(250px) rotate(0deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
