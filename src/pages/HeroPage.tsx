@@ -65,7 +65,7 @@ const HeroPage = () => {
             Node/Express.js, I ensure visually appealing and high-performing
             websites. Let's shape the future of the web together!
           </p>
-          <div className="flex items-center justify-center gap-4 xl:justify-start">
+          <div className="flex items-center justify-center gap-4 xl:justify-start z-10">
             <DownloadButton />
             <button
               className="relative inline-flex items-center justify-center p-0.5
