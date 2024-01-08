@@ -55,7 +55,10 @@ const HeroPage = () => {
             Crafting Tomorrow's <br />
             <span className="gradient-text">Digital Presence</span>{" "}
           </h1>
-          <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12">
+          <p
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12
+          xl:bg-none backdrop-blur-none bg-white/30"
+          >
             In the dynamic world of web development, I specialize in crafting
             seamless front-end experiences and robust back-end functionalities.
             Proficient in HTML, CSS, JavaScript, TypeScript, React.js and
