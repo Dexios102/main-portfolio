@@ -9,6 +9,12 @@ import nodejs from "../assets/node-js.svg";
 import github from "../assets/github.svg";
 import react from "../assets/react.svg";
 import mongodb from "../assets/mongodb.svg";
+import mysql from "../assets/mysql.svg";
+import redux from "../assets/redux.svg";
+import framer from "../assets/framer.svg";
+import tailwind from "../assets/tailwind.svg";
+import git from "../assets/git.svg";
+import api from "../assets/api.svg";
 
 const HeroPage = () => {
   const icons = [
@@ -18,6 +24,12 @@ const HeroPage = () => {
     { src: react, alt: "React.js Logo" },
     { src: github, alt: "Git.js Logo" },
     { src: mongodb, alt: "MongoDB.js Logo" },
+    { src: mysql, alt: "MySQL.js Logo" },
+    { src: redux, alt: "Redux.js Logo" },
+    { src: framer, alt: "Framer.js Logo" },
+    { src: tailwind, alt: "Tailwind.js Logo" },
+    { src: git, alt: "Git.js Logo" },
+    { src: api, alt: "API.js Logo" },
   ];
 
   return (
@@ -86,7 +98,7 @@ const HeroPage = () => {
         </div>
         <div
           className="w-full h-full max-w-[737px] max-h-[678px] absolute xl:top-[250px]
-         xl:right-40 cloud overflow-hidden top-0 right-0"
+         xl:right-40 cloud overflow-hidden top-0 right-0 pt-6"
         >
           <div className="hidden xl:flex xl:max-w-none">
             <img
