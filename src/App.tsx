@@ -44,11 +44,11 @@ const App = () => {
     <div className="app">
       <div className="bg" ref={background}></div>
       <AnimatePresence mode="wait">
+        <Transitions />
         <div className="xl:mx-32">
           <Header />
           <Navbar />
           <div className="px-4">
-            <Transitions />
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HeroPage />} />
               <Route path="/about" element={<AboutPage />} />

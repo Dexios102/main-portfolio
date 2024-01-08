@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import facebook from "../assets/facebook.svg";
 import github from "../assets/github.svg";
@@ -7,6 +8,7 @@ import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.svg";
 import x from "../assets/x.png";
 import ThemeMode from "./ThemeMode";
+import { fadeIn } from "../variants";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,14 +18,19 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 px-4">
       {/* Logo */}
-      <div
+      <motion.div
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
         className="text-2xl md:text-3xl font-extrabold tracking-wide
       cursor-pointer"
       >
         <Link to="/">
           <h1 className="gradient-text">Dexios.dev</h1>
         </Link>
-      </div>
+      </motion.div>
 
       {/* Hamburger Menu Icon */}
       <div className="block md:hidden">

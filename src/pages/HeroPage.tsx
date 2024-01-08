@@ -43,7 +43,7 @@ const HeroPage = () => {
         >
           <div className="pl-2 mb-2">
             <motion.h2
-              variants={fadeIn("down", 0.2)}
+              variants={fadeIn("left", 0.4)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
@@ -73,7 +73,7 @@ const HeroPage = () => {
             </motion.h2>
           </div>
           <motion.h1
-            variants={fadeIn("left", 0.3)}
+            variants={fadeIn("left", 0.6)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -84,7 +84,7 @@ const HeroPage = () => {
             <span className="gradient-text">Digital Presence</span>{" "}
           </motion.h1>
           <motion.p
-            variants={fadeIn("up", 0.4)}
+            variants={fadeIn("up", 0.8)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -121,13 +121,20 @@ const HeroPage = () => {
           className="w-full h-full max-w-[737px] max-h-[678px] absolute xl:top-[250px]
          xl:right-40 cloud overflow-hidden top-0 right-0 pt-6"
         >
-          <div className="hidden xl:flex xl:max-w-none">
+          <motion.div
+            variants={fadeIn("down", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 2 }}
+            className="hidden xl:flex xl:max-w-none"
+          >
             <img
               src={Abstract}
               alt="abstract"
               className="w-full max-w-[800px]"
             />
-          </div>
+          </motion.div>
           <div className="circle">
             {icons.map((icon, index) => (
               <img
