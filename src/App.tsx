@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { isMobile } from "react-device-detect";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
@@ -47,7 +47,7 @@ const App = () => {
         <div className="xl:mx-32">
           <Header />
           <Navbar />
-          <motion.div className="px-4">
+          <div className="px-4">
             <Transitions />
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HeroPage />} />
@@ -55,7 +55,7 @@ const App = () => {
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
-          </motion.div>
+          </div>
         </div>
       </AnimatePresence>
     </div>

@@ -43,7 +43,7 @@ const HeroPage = () => {
         >
           <div className="pl-2 mb-2">
             <motion.h2
-              variants={fadeIn("left", 0.3)}
+              variants={fadeIn("down", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
@@ -73,7 +73,7 @@ const HeroPage = () => {
             </motion.h2>
           </div>
           <motion.h1
-            variants={fadeIn("up", 0.4)}
+            variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -83,7 +83,12 @@ const HeroPage = () => {
             Crafting Tomorrow's <br />
             <span className="gradient-text">Digital Presence</span>{" "}
           </motion.h1>
-          <p
+          <motion.p
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 1 }}
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12
           xl:bg-none backdrop-blur-none bg-white/30"
           >
@@ -92,7 +97,7 @@ const HeroPage = () => {
             Proficient in HTML, CSS, JavaScript, TypeScript, React.js and
             Node/Express.js, I ensure visually appealing and high-performing
             websites. Let's shape the future of the web together!
-          </p>
+          </motion.p>
           <div className="flex items-center justify-center gap-4 xl:justify-start z-10">
             <DownloadButton />
             <button
