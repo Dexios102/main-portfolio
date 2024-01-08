@@ -191,6 +191,13 @@ p {
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1280px) {
+  .download-button {
+    font-size: 15px;
+  }
 }
 
 .download-button span {

@@ -69,13 +69,13 @@ const HeroPage = () => {
             <DownloadButton />
             <button
               className="relative inline-flex items-center justify-center p-0.5
-             me-2 overflow-hidden text-lg font-semibold text-rose-800 rounded-lg group
+             me-2 overflow-hidden xl:text-lg text-sm font-semibold text-rose-800 rounded-lg group
               bg-gradient-to-br from-red-400 to-red-600 group-hover:from-rose-600
                group-hover:to-red-500 hover:text-white focus:ring-4 focus:outline-none
                shadow-md shadow-gray-600"
             >
               <span
-                className="relative flex items-center px-2 py-3.5 transition-all ease-in
+                className="relative flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
                duration-75 bg-white rounded-md group-hover:bg-opacity-0"
               >
                 <MdConnectWithoutContact className="me-2 w-6 h-6" />
