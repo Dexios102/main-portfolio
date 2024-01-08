@@ -26,7 +26,7 @@ const Header = () => {
       </div>
 
       {/* Hamburger Menu Icon */}
-      <div className="block lg:hidden">
+      <div className="block md:hidden">
         <button onClick={toggleMenu}>
           <svg
             className="w-8 h-8 text-gray-900"
@@ -46,7 +46,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden ${menuOpen ? "block" : "hidden"}`}>
+      <div className={`md:hidden ${menuOpen ? "block" : "hidden"}`}>
         <ul className="flex flex-col items-center text-xl font-semibold tracking-wide">
           <li className="nav-pages">Home</li>
           <li className="nav-pages">About</li>
@@ -56,9 +56,9 @@ const Header = () => {
       </div>
 
       {/* Social Links and Theme Toggle */}
-      <div className="hidden lg:flex gap-6 items-center">
+      <div className="hidden md:flex gap-6 items-center">
         {/* ... (your existing social links and theme toggle) */}
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-2 lg:gap-4 items-center">
           <li>
             <img
               src={facebook}
