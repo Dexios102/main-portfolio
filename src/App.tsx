@@ -44,7 +44,7 @@ const App = () => {
     <div className="app">
       <div className="bg" ref={background}></div>
       <AnimatePresence mode="wait">
-        <Transitions />
+        <Transitions key={location.pathname} />
         <div className="xl:mx-32">
           <Header />
           <Navbar />
