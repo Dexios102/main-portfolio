@@ -237,7 +237,7 @@ p {
   height: 600px;
   border-radius: 50%;
   margin: 40px auto;
-  animation: spin 5s linear infinite;
+  animation: spin 10s linear infinite;
   z-index: -1;
   bottom: 32rem;
 }
@@ -260,8 +260,8 @@ p {
     right: 20rem;
   }
   .circle__icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .circle__icon--0,
   .circle__icon--1,
