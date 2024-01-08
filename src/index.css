@@ -256,7 +256,8 @@ p {
     width: 300px;
     height: 300px;
     margin: 10px auto;
-    bottom: 15rem;
+    top: 15rem;
+    right: 20rem;
   }
   .circle__icon {
     width: 50px;
