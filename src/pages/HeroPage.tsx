@@ -1,5 +1,7 @@
 import DownloadButton from "../components/DownloadButton";
 import { MdConnectWithoutContact } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 import { TypeAnimation } from "react-type-animation";
 import Abstract from "../assets/abstract.png";
@@ -40,7 +42,14 @@ const HeroPage = () => {
         xl:text-left h-full container mx-auto"
         >
           <div className="pl-2 mb-2">
-            <h2 className="xl:border-l-4 border-red-600 xl:pl-2">
+            <motion.h2
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+              transition={{ duration: 0.5 }}
+              className="xl:border-l-4 border-red-600 xl:pl-2"
+            >
               Hello👋🏻, I'm{" "}
               <span className="text-medium font-semibold text-red-600">
                 <TypeAnimation
@@ -61,12 +70,19 @@ const HeroPage = () => {
                   repeat={Infinity}
                 />
               </span>
-            </h2>
+            </motion.h2>
           </div>
-          <h1 className="h1">
+          <motion.h1
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 0.5 }}
+            className="h1"
+          >
             Crafting Tomorrow's <br />
             <span className="gradient-text">Digital Presence</span>{" "}
-          </h1>
+          </motion.h1>
           <p
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12
           xl:bg-none backdrop-blur-none bg-white/30"
