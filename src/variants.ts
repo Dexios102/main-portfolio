@@ -21,8 +21,6 @@ export const fadeIn = (direction: string, delay: number) => {
   };
 };
 
-/* Framer Motion Variants */
-
 /* ScaleUp Variant */
 export const scaleUp = (delay: number) => {
   return {
