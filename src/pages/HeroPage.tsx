@@ -1,7 +1,7 @@
 import DownloadButton from "../components/DownloadButton";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn, scaleUp } from "../variants";
 
 import { TypeAnimation } from "react-type-animation";
 import Abstract from "../assets/abstract.png";
@@ -98,7 +98,14 @@ const HeroPage = () => {
             Node/Express.js, I ensure visually appealing and high-performing
             websites. Let's shape the future of the web together!
           </motion.p>
-          <div className="flex items-center justify-center gap-4 xl:justify-start z-10">
+          <motion.div
+            variants={scaleUp(2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 1 }}
+            className="flex items-center justify-center gap-4 xl:justify-start z-10"
+          >
             <DownloadButton />
             <button
               className="relative inline-flex items-center justify-center p-0.5
@@ -115,7 +122,7 @@ const HeroPage = () => {
                 Hire Me
               </span>
             </button>
-          </div>
+          </motion.div>
         </div>
         <div
           className="w-full h-full max-w-[737px] max-h-[678px] absolute xl:top-[250px]
@@ -135,7 +142,14 @@ const HeroPage = () => {
               className="w-full max-w-[800px]"
             />
           </motion.div>
-          <div className="circle">
+          <motion.div
+            variants={fadeIn("up", 0.8)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 2 }}
+            className="circle"
+          >
             {icons.map((icon, index) => (
               <img
                 key={index}
@@ -144,7 +158,7 @@ const HeroPage = () => {
                 className={`circle__icon circle__icon--${index}`}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
