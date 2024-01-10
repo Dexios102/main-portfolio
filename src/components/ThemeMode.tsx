@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ToggleSwitchProps {}
 
 const ThemeMode: React.FC<ToggleSwitchProps> = () => {
   const [isDayMode, setDayMode] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (!isDayMode) {
+      document.documentElement.classList.toggle("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDayMode]);
 
   const toggleMode = () => {
     setDayMode(!isDayMode);

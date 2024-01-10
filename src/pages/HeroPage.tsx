@@ -1,7 +1,7 @@
 import DownloadButton from "../components/DownloadButton";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { motion } from "framer-motion";
-import { fadeIn, scaleUp } from "../variants";
+import { fadeIn, scaleUp } from "../utils/variants";
 
 import { TypeAnimation } from "react-type-animation";
 import Abstract from "../assets/abstract.png";
@@ -35,7 +35,7 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className="h-full">
+    <div className="h-full dark:bg-black">
       <div className="w-full h-full">
         <div
           className="pt-10 text-center flex flex-col justify-center xl:pt-40
