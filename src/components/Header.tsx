@@ -6,13 +6,12 @@ import github from "../assets/github.svg";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.svg";
 import x from "../assets/x.png";
-import ThemeMode from "./ThemeMode";
-import { fadeIn } from "../variants";
+import ThemeMode from "../components/ThemeMode";
+import { fadeIn } from "../utils/variants";
 
 const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 px-4">
-      {/* Logo */}
       <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"
@@ -27,7 +26,6 @@ const Header = () => {
         </Link>
       </motion.div>
 
-      {/* Social Links and Theme Toggle */}
       <div className="flex gap-6 items-center">
         <ul className="hidden md:flex gap-2 lg:gap-4 items-center">
           <li>
@@ -61,6 +59,9 @@ const Header = () => {
         <div className="">
           <ThemeMode />
         </div>
+        {/* <div className="md:hidden">
+          <button>SM</button>
+        </div> */}
       </div>
     </header>
   );
