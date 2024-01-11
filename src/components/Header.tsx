@@ -10,23 +10,11 @@ import ThemeMode from "../components/ThemeMode";
 import { fadeIn } from "../utils/variants";
 
 const socialMediaLinks = [
-  {
-    name: "Facebook",
-    url: "https://www.facebook.com/dexterdave.cajayon",
-    icon: facebook,
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/dexiosss/",
-    icon: instagram,
-  },
-  { name: "GitHub", url: "https://github.com/Dexios102", icon: github },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/dexter-dave-cajayon/",
-    icon: linkedin,
-  },
-  { name: "X", url: "https://twitter.com/DaveCajayo97849", icon: x },
+  { name: "Facebook", url: process.env.FACEBOOK_URL, icon: facebook },
+  { name: "Instagram", url: process.env.INSTAGRAM_URL, icon: instagram },
+  { name: "GitHub", url: process.env.GITHUB_URL, icon: github },
+  { name: "LinkedIn", url: process.env.LINKEDIN_URL, icon: linkedin },
+  { name: "Twitter", url: process.env.TWITTER_URL, icon: x },
 ];
 
 const Header = () => {
