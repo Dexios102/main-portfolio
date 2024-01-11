@@ -10,14 +10,19 @@ import ThemeMode from "../components/ThemeMode";
 import { fadeIn } from "../utils/variants";
 
 const socialMediaLinks = [
-  { name: "Facebook", url: process.env.FACEBOOK_URL, icon: facebook },
-  { name: "Instagram", url: process.env.INSTAGRAM_URL, icon: instagram },
-  { name: "GitHub", url: process.env.GITHUB_URL, icon: github },
-  { name: "LinkedIn", url: process.env.LINKEDIN_URL, icon: linkedin },
-  { name: "Twitter", url: process.env.TWITTER_URL, icon: x },
+  { name: "Facebook", url: process.env.REACT_APP_FACEBOOK_URL, icon: facebook },
+  {
+    name: "Instagram",
+    url: process.env.REACT_APP_INSTAGRAM_URL,
+    icon: instagram,
+  },
+  { name: "GitHub", url: process.env.REACT_APP_GITHUB_URL, icon: github },
+  { name: "LinkedIn", url: process.env.REACT_APP_LINKEDIN_URL, icon: linkedin },
+  { name: "Twitter", url: process.env.REACT_APP_TWITTER_URL, icon: x },
 ];
 
 const Header = () => {
+  console.log(process.env.REACT_APP_FACEBOOK_URL);
   return (
     <header className="flex justify-between items-center py-6 px-4">
       <motion.div
