@@ -29,39 +29,46 @@ const Header = () => {
       <div className="flex gap-6 items-center">
         <ul className="hidden md:flex gap-2 lg:gap-4 items-center">
           <li>
-            <img
-              src={facebook}
-              alt="facebook_icon"
-              className="w-10 h-10 icons"
-            />
+            <a href="https://www.facebook.com/dexterdave.cajayon">
+              <img
+                src={facebook}
+                alt="facebook_icon"
+                className="w-10 h-10 icons"
+              />
+            </a>
           </li>
           <li>
-            <img
-              src={instagram}
-              alt="instagram_icon"
-              className="w-9 h-9 icons"
-            />
+            <a href="https://www.instagram.com/dexiosss/">
+              <img
+                src={instagram}
+                alt="instagram_icon"
+                className="w-9 h-9 icons"
+              />
+            </a>
           </li>
           <li>
-            <img src={github} alt="github_icon" className="w-10 h-10 icons" />
+            <a href="https://github.com/Dexios102">
+              <img src={github} alt="github_icon" className="w-10 h-10 icons" />
+            </a>
           </li>
           <li>
-            <img
-              src={linkedin}
-              alt="linkedin_icon"
-              className="w-10 h-10 icons"
-            />
+            <a href="https://www.linkedin.com/in/dexter-dave-cajayon/">
+              <img
+                src={linkedin}
+                alt="linkedin_icon"
+                className="w-10 h-10 icons"
+              />
+            </a>
           </li>
           <li>
-            <img src={x} alt="x_icon" className="w-9 h-9 icons" />
+            <a href="https://twitter.com/DaveCajayo97849">
+              <img src={x} alt="x_icon" className="w-9 h-9 icons" />
+            </a>
           </li>
         </ul>
         <div className="">
           <ThemeMode />
         </div>
-        {/* <div className="md:hidden">
-          <button>SM</button>
-        </div> */}
       </div>
     </header>
   );
