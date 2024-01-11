@@ -9,6 +9,26 @@ import x from "../assets/x.png";
 import ThemeMode from "../components/ThemeMode";
 import { fadeIn } from "../utils/variants";
 
+const socialMediaLinks = [
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/dexterdave.cajayon",
+    icon: facebook,
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/dexiosss/",
+    icon: instagram,
+  },
+  { name: "GitHub", url: "https://github.com/Dexios102", icon: github },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/dexter-dave-cajayon/",
+    icon: linkedin,
+  },
+  { name: "X", url: "https://twitter.com/DaveCajayo97849", icon: x },
+];
+
 const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 px-4">
@@ -18,8 +38,7 @@ const Header = () => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl md:text-3xl font-extrabold tracking-wide
-      cursor-pointer"
+        className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-wide cursor-pointer"
       >
         <Link to="/">
           <h1 className="gradient-text">Dexios.dev</h1>
@@ -28,43 +47,17 @@ const Header = () => {
 
       <div className="flex gap-6 items-center">
         <ul className="hidden md:flex gap-2 lg:gap-4 items-center">
-          <li>
-            <a href="https://www.facebook.com/dexterdave.cajayon">
-              <img
-                src={facebook}
-                alt="facebook_icon"
-                className="w-10 h-10 icons"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/dexiosss/">
-              <img
-                src={instagram}
-                alt="instagram_icon"
-                className="w-9 h-9 icons"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Dexios102">
-              <img src={github} alt="github_icon" className="w-10 h-10 icons" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/dexter-dave-cajayon/">
-              <img
-                src={linkedin}
-                alt="linkedin_icon"
-                className="w-10 h-10 icons"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/DaveCajayo97849">
-              <img src={x} alt="x_icon" className="w-9 h-9 icons" />
-            </a>
-          </li>
+          {socialMediaLinks.map((socialMedia, index) => (
+            <li key={index}>
+              <a href={socialMedia.url} rel="noopener noreferrer">
+                <img
+                  src={socialMedia.icon}
+                  alt={`${socialMedia.name}_icon`}
+                  className="w-10 h-10 icons"
+                />
+              </a>
+            </li>
+          ))}
         </ul>
         <div className="">
           <ThemeMode />
