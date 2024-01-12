@@ -35,7 +35,7 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className="h-full dark:bg-black">
+    <div className="h-full bg-transparent dark:text-white">
       <div className="w-full h-full">
         <div
           className="pt-10 text-center flex flex-col justify-center xl:pt-40
@@ -90,7 +90,7 @@ const HeroPage = () => {
             viewport={{ once: false, amount: 0.7 }}
             transition={{ duration: 1 }}
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12
-          xl:bg-none backdrop-blur-none bg-white/30"
+           dark:bg-none dark:text-gray-400"
           >
             In the dynamic world of web development, I specialize in crafting
             seamless front-end experiences and robust back-end functionalities.
@@ -104,7 +104,8 @@ const HeroPage = () => {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-center gap-4 xl:justify-start z-10"
+            className="flex items-center justify-center gap-4 xl:justify-start z-10
+            dark:shadow-gray-900"
           >
             <DownloadButton />
             <button
@@ -112,11 +113,11 @@ const HeroPage = () => {
              me-2 overflow-hidden xl:text-lg text-sm font-semibold text-rose-800 rounded-lg group
               bg-gradient-to-br from-red-400 to-red-600 group-hover:from-rose-600
                group-hover:to-red-500 hover:text-white focus:ring-4 focus:outline-none
-               shadow-md shadow-gray-600"
+               shadow-md shadow-gray-600 dark:shadow-lg dark:shadow-gray-800 "
             >
               <span
                 className="relative flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
-               duration-75 bg-white rounded-md group-hover:bg-opacity-0"
+               duration-75 bg-white rounded-md group-hover:bg-opacity-0 dark:bg-[#011627] dark:text-gray-200"
               >
                 <MdConnectWithoutContact className="me-2 w-6 h-6" />
                 Hire Me

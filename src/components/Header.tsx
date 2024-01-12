@@ -31,7 +31,10 @@ const socialMediaLinks = [
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center py-6 px-4">
+    <header
+      className="flex justify-between items-center py-6 px-4
+    dark:bg-[#011627]"
+    >
       <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"

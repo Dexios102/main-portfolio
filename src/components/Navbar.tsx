@@ -13,7 +13,7 @@ const Navbar = () => {
         className="w-full flex xl:flex-col items-center justify-between
        xl:justify-center gap-y-10 px-10 md:px-40 xl:px-0 h-8 bg-red-800
         xl:h-max py-6 backdrop-blur-sm text-2xl xl:text-xl rounded-full
-         text-white shadow-lg shadow-gray-400"
+         text-white shadow-lg shadow-gray-400 dark:shadow-gray-800"
       >
         {[
           { to: "/", icon: <FaHome />, text: "Home" },
@@ -25,7 +25,9 @@ const Navbar = () => {
             <Link to={item.to}>
               <div className="group nav-info">
                 {item.icon}
-                <span className="group-hover:scale-100">{item.text}</span>
+                <span className="group-hover:scale-100 dark:text-gray-200">
+                  {item.text}
+                </span>
               </div>
             </Link>
           </li>
