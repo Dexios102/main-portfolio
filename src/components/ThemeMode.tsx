@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-interface ToggleSwitchProps {}
+interface ToggleSwitchProps {
+  setDayMode: React.Dispatch<React.SetStateAction<boolean>>;
+  isDayMode: boolean;
+}
 
-const ThemeMode: React.FC<ToggleSwitchProps> = () => {
-  const [isDayMode, setDayMode] = useState<boolean>(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    return localTheme ? localTheme === "true" : true;
-  });
+const ThemeMode: React.FC<ToggleSwitchProps> = ({ setDayMode, isDayMode }) => {
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", !isDayMode);
+    window.localStorage.setItem("theme", JSON.stringify(isDayMode));
+  }, [isDayMode]);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", !isDayMode);

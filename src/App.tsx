@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useState } from "react";
 
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -13,14 +14,18 @@ import Transitions from "./components/Transitions";
 
 const App = () => {
   const location = useLocation();
+  const [isDayMode, setDayMode] = useState<boolean>(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    return localTheme ? localTheme === "true" : true;
+  });
 
   return (
     <div className="app h-screen">
-      <Background />
+      <Background isDayMode={isDayMode} />
       <AnimatePresence mode="wait">
         <Transitions key={location.pathname} />
         <div className="xl:mx-32">
-          <Header />
+          <Header setDayMode={setDayMode} isDayMode={isDayMode} />
           <Navbar />
           <div className="px-4">
             <Routes location={location} key={location.pathname}>

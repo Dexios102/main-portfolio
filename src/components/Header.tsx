@@ -29,7 +29,11 @@ const socialMediaLinks = [
   { name: "Twitter", url: import.meta.env.VITE_APP_TWITTER_URL, icon: x },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  setDayMode: React.Dispatch<React.SetStateAction<boolean>>;
+  isDayMode: boolean;
+}
+const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
   return (
     <header
       className="flex justify-between items-center py-6 px-4
@@ -64,7 +68,7 @@ const Header = () => {
           ))}
         </ul>
         <div className="">
-          <ThemeMode />
+          <ThemeMode setDayMode={setDayMode} isDayMode={isDayMode} />
         </div>
       </div>
     </header>
