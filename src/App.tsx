@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 import { AnimatePresence } from "framer-motion";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import Header from "./components/Header";
 import NET from "vanta/dist/vanta.net.min";
@@ -58,6 +59,7 @@ const App = () => {
           </div>
         </div>
       </AnimatePresence>
+      <SpeedInsights />
     </div>
   );
 };
