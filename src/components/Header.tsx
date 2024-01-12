@@ -38,7 +38,8 @@ const Header = () => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5 }}
-        className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-wide cursor-pointer"
+        className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-wide
+         cursor-pointer"
       >
         <Link to="/">
           <h1 className="gradient-text">Dexios.dev</h1>
