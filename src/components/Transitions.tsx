@@ -18,14 +18,33 @@ const containerVariants = {
 
 const Transitions = () => {
   return (
-    <motion.div
-      className="fixed top-0 bottom-0 right-full h-screen z-30 bg-red-800"
-      variants={containerVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ delay: 0.2, duration: 1, ease: "easeInOut" }}
-    ></motion.div>
+    <>
+      <motion.div
+        className="fixed top-0 bottom-0 right-full h-screen z-30 bg-[#540804]"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ delay: 0.2, duration: 1, ease: "easeInOut" }}
+      ></motion.div>
+
+      <motion.div
+        className="fixed top-0 bottom-0 right-full h-screen z-20 bg-[#003049]"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ delay: 0.25, duration: 1, ease: "easeInOut" }}
+      ></motion.div>
+      <motion.div
+        className="fixed top-0 bottom-0 right-full h-screen z-10 bg-[#03071e]"
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ delay: 0.3, duration: 1, ease: "easeInOut" }}
+      ></motion.div>
+    </>
   );
 };
 
