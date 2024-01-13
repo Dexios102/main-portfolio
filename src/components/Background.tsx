@@ -5,7 +5,6 @@ import NET from "vanta/dist/vanta.net.min";
 interface BackgroundProps {
   isDayMode: boolean;
 }
-/* gg */
 const Background: React.FC<BackgroundProps> = ({ isDayMode }) => {
   const background = useRef(null);
 
