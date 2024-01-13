@@ -29,7 +29,7 @@ const Transitions = () => {
       ></motion.div>
 
       <motion.div
-        className="fixed top-0 bottom-0 right-full h-screen z-20 bg-[#003049]"
+        className="fixed top-0 bottom-0 right-full h-screen z-20 bg-[#edf2f4]"
         variants={containerVariants}
         initial="initial"
         animate="animate"
