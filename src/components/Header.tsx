@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import facebook from "../assets/facebook.svg";
@@ -34,8 +34,19 @@ interface HeaderProps {
   isDayMode: boolean;
 }
 const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
+  const location = useLocation();
+  const isAboutPage = location.pathname === "/about";
+  const lightModeBackgroundColor = "bg-white";
+  const darkModeBackgroundColor = "bg-[#011627]";
+  const backgroundColor = isDayMode
+    ? lightModeBackgroundColor
+    : darkModeBackgroundColor;
+  const addBackground = isAboutPage ? `${backgroundColor}` : "";
   return (
-    <header className="flex justify-between items-center py-6 px-4">
+    <header
+      className={`flex justify-between items-center py-6 px-4 sticky top-0
+     ${addBackground}`}
+    >
       <motion.div
         variants={fadeIn("left", 0.1)}
         initial="hidden"

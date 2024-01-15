@@ -5,17 +5,17 @@ import Experience from "../components/about/Experience";
 
 const AboutPage = () => {
   return (
-    <section>
-      <div>
+    <section className="dark:text-white">
+      <div className="h-screen">
         <Information />
       </div>
-      <div>
+      <div className="h-screen">
         <Skills />
       </div>
-      <div>
+      <div className="h-screen">
         <Education />
       </div>
-      <div>
+      <div className="h-screen">
         <Experience />
       </div>
     </section>
