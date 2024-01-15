@@ -11,7 +11,7 @@ const Navbar = () => {
     >
       <ul
         className="w-full flex xl:flex-col items-center justify-between
-       xl:justify-center gap-y-10 px-10 md:px-40 xl:px-0 h-8 bg-red-800
+       xl:justify-center gap-y-10 px-10 md:px-40 xl:px-0 h-8 bg-red-700
         xl:h-max py-6 backdrop-blur-sm text-2xl xl:text-xl rounded-full
          text-white shadow-lg shadow-gray-400 dark:shadow-gray-800"
       >
