@@ -338,3 +338,8 @@ p {
     transform: rotate(360deg);
   }
 }
+
+.progress-bar {
+  @apply fixed h-[3px] origin-left bg-gradient-to-r from-red-500
+via-red-400 to-rose-800 top-0 left-0 right-0;
+}

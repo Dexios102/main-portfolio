@@ -42,6 +42,7 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
     ? lightModeBackgroundColor
     : darkModeBackgroundColor;
   const addBackground = isAboutPage ? `${backgroundColor}` : "";
+
   return (
     <header
       className={`flex justify-between items-center py-6 px-4 sticky top-0
