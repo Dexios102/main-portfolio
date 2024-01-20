@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.15.14",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.29",
     "@types/three": "^0.160.0",
