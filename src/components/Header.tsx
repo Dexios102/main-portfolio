@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -34,6 +35,7 @@ interface HeaderProps {
   setDayMode: React.Dispatch<React.SetStateAction<boolean>>;
   isDayMode: boolean;
 }
+
 const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
@@ -43,6 +45,9 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
     ? lightModeBackgroundColor
     : darkModeBackgroundColor;
   const addBackground = isAboutPage ? `${backgroundColor}` : "";
+
+  const [showSocialMedia, setShowSocialMedia] = useState(false);
+  const toggleShowSocialMedia = () => setShowSocialMedia(!showSocialMedia);
 
   return (
     <header
@@ -71,22 +76,45 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
                 <img
                   src={socialMedia.icon}
                   alt={`${socialMedia.name}_icon`}
-                  className="w-10 h-10 icons"
+                  className="w-10 h-10 icons "
                 />
               </a>
             </li>
           ))}
         </ul>
+
         <div className="">
           <ThemeMode setDayMode={setDayMode} isDayMode={isDayMode} />
         </div>
-        <div
+        <button
           className="md:hidden hover:scale-105 ease-in-out duration-300
-        dark:bg-slate-800 rounded-full p-2 bg-gray-200"
+        dark:bg-slate-800 rounded-full p-2 bg-gray-200 z-50"
+          onClick={toggleShowSocialMedia}
         >
           <TbSocial className="text-xl text-slate-600 dark:text-gray-300" />
-        </div>
+        </button>
       </div>
+      {showSocialMedia && (
+        <div
+          className="bg-white-5 backdrop-blur-sm h-screen w-full absolute top-0
+        left-0"
+        >
+          <h1 className="text-center dark:text-white">Connect with me</h1>
+          <ul className="flex gap-2 lg:gap-4 items-center justify-center">
+            {socialMediaLinks.map((socialMedia, index) => (
+              <li key={index}>
+                <a href={socialMedia.url} rel="noopener noreferrer">
+                  <img
+                    src={socialMedia.icon}
+                    alt={`${socialMedia.name}_icon`}
+                    className="w-10 h-10 icons "
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
