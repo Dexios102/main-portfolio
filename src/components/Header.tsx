@@ -9,7 +9,7 @@ import linkedin from "../assets/linkedin.svg";
 import { TbSocial } from "react-icons/tb";
 import x from "../assets/x.png";
 import ThemeMode from "../components/ThemeMode";
-import { fadeIn } from "../utils/variants";
+import { fadeIn, scaleUp } from "../utils/variants";
 
 const socialMediaLinks = [
   {
@@ -96,23 +96,42 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
       </div>
       {showSocialMedia && (
         <div
-          className="bg-white-5 backdrop-blur-sm h-screen w-full absolute top-0
+          className="bg-white-5 backdrop-blur-md h-screen w-full absolute top-0
         left-0"
         >
-          <h1 className="text-center dark:text-white">Connect with me</h1>
-          <ul className="flex gap-2 lg:gap-4 items-center justify-center">
-            {socialMediaLinks.map((socialMedia, index) => (
-              <li key={index}>
-                <a href={socialMedia.url} rel="noopener noreferrer">
-                  <img
-                    src={socialMedia.icon}
-                    alt={`${socialMedia.name}_icon`}
-                    className="w-10 h-10 icons "
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center justify-center h-full flex-col">
+            <motion.h1
+              className="text-center text-white text-2xl font-bold
+             mb-6"
+              variants={scaleUp(0.5)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
+              Connect with me
+            </motion.h1>
+            <motion.ul
+              className="flex gap-2 lg:gap-4 items-center justify-center"
+              variants={scaleUp(1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
+              {socialMediaLinks.map((socialMedia, index) => (
+                <li key={index}>
+                  <a href={socialMedia.url} rel="noopener noreferrer">
+                    <img
+                      src={socialMedia.icon}
+                      alt={`${socialMedia.name}_icon`}
+                      className="w-10 h-10 icons "
+                    />
+                  </a>
+                </li>
+              ))}
+            </motion.ul>
+          </div>
         </div>
       )}
     </header>
