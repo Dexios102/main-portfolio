@@ -5,6 +5,7 @@ import facebook from "../assets/facebook.svg";
 import github from "../assets/github.svg";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.svg";
+import { TbSocial } from "react-icons/tb";
 import x from "../assets/x.png";
 import ThemeMode from "../components/ThemeMode";
 import { fadeIn } from "../utils/variants";
@@ -62,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
         </Link>
       </motion.div>
 
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-2 items-center md:gap-6">
         <ul className="hidden md:flex gap-2 lg:gap-4 items-center">
           {socialMediaLinks.map((socialMedia, index) => (
             <li key={index}>
@@ -78,6 +79,12 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
         </ul>
         <div className="">
           <ThemeMode setDayMode={setDayMode} isDayMode={isDayMode} />
+        </div>
+        <div
+          className="md:hidden hover:scale-105 ease-in-out duration-300
+        dark:bg-slate-800 rounded-full p-2 bg-gray-200"
+        >
+          <TbSocial className="text-xl text-slate-600 dark:text-gray-300" />
         </div>
       </div>
     </header>
