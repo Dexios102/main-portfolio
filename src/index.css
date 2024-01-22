@@ -242,13 +242,21 @@ p {
   }
 }
 
+.hero-cloud {
+  z-index: -1;
+}
+
+.social-spin {
+  animation: spin 15s linear infinite;
+}
+
 .circle {
   position: relative;
   width: 600px;
   height: 600px;
   border-radius: 50%;
   margin: 40px auto;
-  animation: spin 10s linear infinite;
+  animation: spin 15s linear infinite;
   z-index: -1;
   bottom: 35rem;
 }
