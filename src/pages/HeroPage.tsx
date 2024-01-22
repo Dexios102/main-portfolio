@@ -104,19 +104,19 @@ const HeroPage = () => {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-center gap-4 xl:justify-start z-10
+            className="flex items-center justify-center gap-4 xl:justify-start
             dark:shadow-gray-900"
           >
             <DownloadButton />
             <button
-              className="relative inline-flex items-center justify-center p-0.5
+              className="inline-flex items-center justify-center p-0.5
              me-2 overflow-hidden xl:text-lg text-sm font-semibold text-rose-800 rounded-lg group
               bg-gradient-to-br from-red-400 to-red-600 group-hover:from-rose-600
                group-hover:to-red-500 hover:text-white focus:ring-4 focus:outline-none
-               shadow-md shadow-gray-600 dark:shadow-lg dark:shadow-gray-800 "
+               shadow-md shadow-gray-600 dark:shadow-lg dark:shadow-gray-800"
             >
               <span
-                className="relative flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
+                className="flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
                duration-75 bg-white rounded-md group-hover:bg-opacity-0 dark:bg-[#011627] dark:text-gray-200"
               >
                 <MdConnectWithoutContact className="me-2 w-6 h-6" />
@@ -126,8 +126,8 @@ const HeroPage = () => {
           </motion.div>
         </div>
         <div
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute xl:top-[250px]
-         xl:right-40 cloud overflow-hidden top-0 right-0 pt-6"
+          className="w-full h-full xl:max-w-[737px] max-h-[678px] absolute xl:top-[250px]
+         xl:right-40 cloud overflow-hidden top-0 right-20 pt-6 max-w-md hero-cloud"
         >
           <motion.div
             variants={fadeIn("down", 0.2)}
