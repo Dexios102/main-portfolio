@@ -90,7 +90,7 @@ const HeroPage = () => {
             viewport={{ once: false, amount: 0.7 }}
             transition={{ duration: 1 }}
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-12
-           dark:bg-none dark:text-gray-400"
+           dark:bg-none dark:text-gray-400 text-md md:text-lg"
           >
             In the dynamic world of web development, I specialize in crafting
             seamless front-end experiences and robust back-end functionalities.
