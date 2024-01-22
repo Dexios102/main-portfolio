@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
         >
           <div className="flex items-center justify-center h-full flex-col">
             <motion.h1
-              className="text-center text-white text-2xl font-bold mb-6"
+              className="text-center text-black dark:text-white text-2xl font-bold mb-6"
               variants={scaleUp(0.5)}
               initial="hidden"
               whileInView={"show"}
