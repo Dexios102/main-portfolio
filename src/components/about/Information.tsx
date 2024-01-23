@@ -1,4 +1,5 @@
-/* import Spline from "@splinetool/react-spline"; */
+import blob from "../../assets/blob.svg";
+import blobout from "../../assets/blobout.svg";
 
 const Information = () => {
   return (
@@ -7,7 +8,10 @@ const Information = () => {
     overflow-hidden"
     >
       <div className="text-3xl font-bold text-white">
-        <div className="relative mt-6"></div>
+        <div className="relative">
+          <img src={blobout} alt="" className="" />
+          <img src={blob} alt="" className="absolute top-0 left-0" />
+        </div>
         <p
           className="dark:text-white text-md border-b-2 border-red-800 pl-2 mb-2 max-w-[40%]
         font-bold uppercase"
