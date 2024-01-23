@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { fadeIn, scaleUp } from "../../utils/variants";
 
 import me from "../../assets/me1.png";
-import blobout from "../../assets/blobout.svg";
 import redblack from "../../assets/red_black.png";
 
 const Information = () => {
@@ -62,12 +61,15 @@ const Information = () => {
           collaborate and build something great!
         </motion.p>
         <div className="relative -z-[1]">
-          <img
-            src={blobout}
-            alt="bloblayer"
-            className="absolute mix-blend-multiply rotate-40"
+          <motion.img
+            src={redblack}
+            alt="splash"
+            variants={scaleUp(1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            transition={{ duration: 1.5 }}
           />
-          <img src={redblack} alt="splash" />
           <img
             src={me}
             alt="blob_image"
@@ -76,7 +78,7 @@ const Information = () => {
           <motion.div
             className="text-black dark:text-white text-center absolute text-sm
            top-10 right-2 font-bold rounded-lg bg-white/10 p-4 backdrop-blur-2xl"
-            variants={scaleUp(2.5)}
+            variants={scaleUp(2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -91,7 +93,7 @@ const Information = () => {
           <motion.div
             className="text-black dark:text-white text-center absolute text-sm
            bottom-28 left-2 font-bold rounded-lg bg-white/10 p-4 backdrop-blur-2xl"
-            variants={scaleUp(3)}
+            variants={scaleUp(2.5)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
