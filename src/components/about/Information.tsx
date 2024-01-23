@@ -1,4 +1,4 @@
-import Spline from "@splinetool/react-spline";
+/* import Spline from "@splinetool/react-spline"; */
 
 const Information = () => {
   return (
@@ -6,22 +6,28 @@ const Information = () => {
       className="flex md:flex-row items-center justify-between flex-col
     overflow-hidden"
     >
-      <div className="text-3xl font-extrabold text-white">
-        <h1 className="text-black dark:text-rose-800 text-center md:text-left mt-4">
-          About Me
-        </h1>
-        <p className="dark:text-gray-300 text-md">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nisi quos
-          itaque aspernatur quisquam sed numquam dolorem neque provident saepe
-          eveniet fugiat magni quod sint, quidem voluptatem omnis in nihil
-          distinctio libero quam totam beatae officiis sunt! At, animi harum.
+      <div className="text-3xl font-bold text-white">
+        <div className="relative mt-6"></div>
+        <p
+          className="dark:text-white text-md border-b-2 border-red-800 pl-2 mb-2 max-w-[40%]
+        font-bold uppercase"
+        >
+          Biography
+        </p>
+        <p className="dark:text-gray-300 text-md text-center">
+          Hey there! I'm Dexter, a Full Stack Developer from the Philippines.
+          Specializing MERN Stack Typescript, I'm currently freelancing and
+          focusing on web/software development. My coding journey started in
+          grade 11, and I bring both technical expertise and artistic flair to
+          create modern and visually appealing web applications. Let's
+          collaborate and build something great!
         </p>
       </div>
       <div className="">
-        <Spline
+        {/* <Spline
           className=""
           scene="https://prod.spline.design/WqYap6iM4cfrLSK3/scene.splinecode"
-        />
+        /> */}
       </div>
     </div>
   );
