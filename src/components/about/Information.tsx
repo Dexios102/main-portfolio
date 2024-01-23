@@ -7,7 +7,7 @@ import redblack from "../../assets/red_black.png";
 const Information = () => {
   return (
     <div
-      className="flex md:flex-row items-center justify-between flex-col
+      className="flex xl:flex-row items-center justify-between flex-col
     overflow-hidden"
     >
       <div className="text-3xl font-bold text-white mt-4">
