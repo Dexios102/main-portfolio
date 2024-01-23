@@ -4,13 +4,13 @@ const Information = () => {
   return (
     <div
       className="flex md:flex-row items-center justify-between flex-col
-    overflow-visble"
+    overflow-hidden"
     >
-      <div className="text-3xl font-bold text-white">
-        <h1 className="text-black dark:text-white text-center md:text-left">
+      <div className="text-3xl font-extrabold text-white">
+        <h1 className="text-black dark:text-rose-800 text-center md:text-left mt-4">
           About Me
         </h1>
-        <p className="dark:text-gray-300">
+        <p className="dark:text-gray-300 text-md">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nisi quos
           itaque aspernatur quisquam sed numquam dolorem neque provident saepe
           eveniet fugiat magni quod sint, quidem voluptatem omnis in nihil

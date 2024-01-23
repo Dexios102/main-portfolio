@@ -17,6 +17,7 @@ import framer from "../assets/framer.svg";
 import tailwind from "../assets/tailwind.svg";
 import git from "../assets/git.svg";
 import api from "../assets/api.svg";
+import { Link } from "react-router-dom";
 
 const HeroPage = () => {
   const icons = [
@@ -108,21 +109,23 @@ const HeroPage = () => {
             dark:shadow-gray-900"
           >
             <DownloadButton />
-            <button
-              className="inline-flex items-center justify-center p-0.5
+            <Link to="/contact">
+              <button
+                className="inline-flex items-center justify-center p-0.5
              me-2 overflow-hidden xl:text-lg text-sm font-semibold text-rose-800 rounded-lg group
               bg-gradient-to-br from-red-400 to-red-600 group-hover:from-rose-600
                group-hover:to-red-500 hover:text-white focus:ring-4 focus:outline-none
                shadow-md shadow-gray-600 dark:shadow-lg dark:shadow-gray-800"
-            >
-              <span
-                className="flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
-               duration-75 bg-white rounded-md group-hover:bg-opacity-0 dark:bg-[#011627] dark:text-gray-200"
               >
-                <MdConnectWithoutContact className="me-2 w-6 h-6" />
-                Hire Me
-              </span>
-            </button>
+                <span
+                  className="flex items-center px-2 py-2 xl:py-3.5 transition-all ease-in
+               duration-75 bg-white rounded-md group-hover:bg-opacity-0 dark:bg-[#011627] dark:text-gray-200"
+                >
+                  <MdConnectWithoutContact className="me-2 w-6 h-6" />
+                  Hire Me
+                </span>
+              </button>
+            </Link>
           </motion.div>
         </div>
         <div
