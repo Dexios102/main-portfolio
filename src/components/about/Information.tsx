@@ -7,11 +7,11 @@ const Information = () => {
       className="flex md:flex-row items-center justify-between flex-col
     overflow-hidden"
     >
-      <div className="text-3xl font-bold text-white">
-        <div className="relative">
-          <img src={blobout} alt="" className="" />
-          <img src={blob} alt="" className="absolute top-0 left-0" />
-        </div>
+      <div className="text-3xl font-bold text-white mt-4">
+        <h1 className="text-black dark:text-white text-center mb-8 font-bold">
+          {" "}
+          Your Creative Full Stack Developer!
+        </h1>
         <p
           className="dark:text-white text-md border-b-2 border-red-800 pl-2 mb-2 max-w-[40%]
         font-bold uppercase"
@@ -26,12 +26,10 @@ const Information = () => {
           create modern and visually appealing web applications. Let's
           collaborate and build something great!
         </p>
-      </div>
-      <div className="">
-        {/* <Spline
-          className=""
-          scene="https://prod.spline.design/WqYap6iM4cfrLSK3/scene.splinecode"
-        /> */}
+        <div className="relative">
+          <img src={blobout} alt="" className="" />
+          <img src={blob} alt="" className="absolute top-0 left-0" />
+        </div>
       </div>
     </div>
   );
