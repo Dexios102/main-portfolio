@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn, scaleUp } from "../../utils/variants";
-
 import me from "../../assets/me1.png";
 import redblack from "../../assets/red_black.png";
 
@@ -33,7 +32,10 @@ const Information = () => {
           >
             Creative
           </motion.span>
-          <br className="hidden md:block" /> Full Stack Developer!
+          <br className="hidden md:block" />{" "}
+          <span className="text-[#370617] dark:text-gray-200">
+            Full Stack Developer!
+          </span>
         </motion.h1>
         <motion.p
           className="dark:text-white text-md border-b-2 border-red-800 pl-2 mb-2 max-w-[40%]
@@ -69,7 +71,7 @@ const Information = () => {
           variants={scaleUp(1)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}
         />
         <img
@@ -83,7 +85,7 @@ const Information = () => {
           variants={scaleUp(2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}
         >
           <span className="text-4xl">5+</span>
@@ -98,7 +100,7 @@ const Information = () => {
           variants={scaleUp(2.5)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}
         >
           <span className="text-4xl">15+</span>
