@@ -15,16 +15,16 @@ const AboutPage = () => {
   return (
     <section className="dark:text-white">
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="h-screen">
+      <div className="">
         <Information />
       </div>
-      <div className="h-screen">
+      <div className="">
         <Skills />
       </div>
-      <div className="h-screen">
+      <div className="">
         <Education />
       </div>
-      <div className="h-screen">
+      <div className="">
         <Experience />
       </div>
     </section>
