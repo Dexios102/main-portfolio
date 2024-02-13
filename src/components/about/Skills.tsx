@@ -37,17 +37,15 @@ import linux from '../../assets/linux.svg';
 
 const Skills = () => {
   return (
-    <div className="mt-10">
-      <div className="flex flex-col md:flex-row items-center justify-around gap-4">
-        <motion.div className="dark:bg-black/10 p-6 backdrop-blur-sm
-        rounded-lg shadow-2xl max-w-sm"
+    <div className="mt-10 flex flex-col md:flex-row items-center justify-evenly gap-4">
+        <motion.div className="p-6 rounded-lg max-w-sm bg-black/20"
         variants={scaleUp(0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-l-2 border-red-600
-          pl-2">
+          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
+          text-center pb-2">
             Front-End Development</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
             <img src={html} alt="html-icon" className='w-12 h-12 icons-hover' />
@@ -64,15 +62,14 @@ const Skills = () => {
             <img src={framer} alt="framer-icon" className='w-12 h-12 bg-white/80 rounded-full icons-hover' />
           </div>
         </motion.div>
-        <motion.div className="dark:bg-black/10 p-6 backdrop-blur-sm
-        rounded-lg shadow-2xl max-w-sm"
+        <motion.div className="p-6 rounded-lg l max-w-sm bg-black/20"
         variants={scaleUp(1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-l-2 border-red-600
-          pl-2">
+          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
+          text-center pb-2">
             Back-End Development</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
             <img src={javascript} alt="javascript-icon" className='w-10 h-10 rounded-sm icons-hover' />
@@ -86,17 +83,15 @@ const Skills = () => {
             <img src={laravel} alt="laravel-icon" className='w-12 h-12 icons-hover' />
           </div>
         </motion.div>
-        <motion.div className="dark:bg-black/10 p-6 backdrop-blur-sm
-        rounded-lg shadow-2xl max-w-sm"
+        <motion.div className="p-6 rounded-lg  max-w-sm bg-black/20"
         variants={scaleUp(1.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-l-2 border-red-600
-          pl-2">
-            Tools</h1>
-          
+          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
+          text-center pb-2">
+            Dev Tools</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
             <img src={git} alt="git-icon" className='w-12 h-12 icons-hover'/>
             <img src={github} alt="github-icon" className='w-12 h-12 icons-hover'/>
@@ -109,7 +104,6 @@ const Skills = () => {
           </div>
         </motion.div>
       </div>
-    </div>
   );
 };
 

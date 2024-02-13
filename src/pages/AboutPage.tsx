@@ -15,18 +15,10 @@ const AboutPage = () => {
   return (
     <section className="dark:text-white">
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="">
         <Information />
-      </div>
-      <div className="">
         <Skills />
-      </div>
-      <div className="">
         <Education />
-      </div>
-      <div className="">
         <Experience />
-      </div>
     </section>
   );
 };
