@@ -37,39 +37,40 @@ import linux from '../../assets/linux.svg';
 
 const Skills = () => {
   return (
-    <div className="mt-10 flex flex-col md:flex-row items-center justify-evenly gap-4">
-        <motion.div className="p-6 rounded-lg max-w-sm bg-black/20"
+    <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4
+    bg-black/10 backdrop-blur-sm md:px-10 md:py-6 rounded-xl px-4 py-4">
+        <motion.div className="p-4 md:p-10 rounded-lg max-w-sm"
         variants={scaleUp(0.5)}
           initial="hidden"
-          whileInView={"show"}
+          whileInView={"show"} 
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
-          text-center pb-2">
+          <h1 className="text-xl md:text-2xl font-extrabold
+          text-center border-l-4 border-red-800">
             Front-End Development</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
-            <img src={html} alt="html-icon" className='w-12 h-12 icons-hover' />
-            <img src={css} alt="css-icon" className='w-12 h-12 icons-hover' />
-            <img src={javascript} alt="javascript-icon" className='w-10 h-10 rounded-sm icons-hover' />
-            <img src={typescript} alt="typescript-icon" className='w-10 h-10 rounded-sm icons-hover' />
-            <img src={react} alt="react-icon" className='w-12 h-12 icons-hover' />
+            <img src={html} alt="html-icon" className='w-12 icons-hover' />
+            <img src={css} alt="css-icon" className='w-12 icons-hover' />
+            <img src={javascript} alt="javascript-icon" className='w-10 rounded-sm icons-hover' />
+            <img src={typescript} alt="typescript-icon" className='w-10 rounded-sm icons-hover' />
+            <img src={react} alt="react-icon" className='w-12 icons-hover' />
             <img src={reactRouter} alt="react-router-icon" className='w-12 h-12 icons-hover' />
-            <img src={redux} alt="redux-icon" className='w-10 h-10 icons-hover' />
-            <img src={vite} alt="vite-icon" className='w-12 h-12 icons-hover' />
-            <img src={tailwind} alt="tailwind-icon" className='w-12 h-12 icons-hover' />
-            <img src={sass} alt="sass-icon" className='w-12 h-12 icons-hover' />
-            <img src={bootstrap} alt="bootstrap-icon" className='w-10 h-10 icons-hover' />
-            <img src={framer} alt="framer-icon" className='w-12 h-12 bg-white/80 rounded-full icons-hover' />
+            <img src={redux} alt="redux-icon" className='w-10 icons-hover' />
+            <img src={vite} alt="vite-icon" className='w-12 icons-hover' />
+            <img src={tailwind} alt="tailwind-icon" className='w-12 icons-hover' />
+            <img src={sass} alt="sass-icon" className='w-12 icons-hover' />
+            <img src={bootstrap} alt="bootstrap-icon" className='w-10 icons-hover' />
+            <img src={framer} alt="framer-icon" className='w-12 bg-white/80 rounded-full icons-hover' />
           </div>
         </motion.div>
-        <motion.div className="p-6 rounded-lg l max-w-sm bg-black/20"
+        <motion.div className="p-6 rounded-lg l max-w-sm"
         variants={scaleUp(1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
-          text-center pb-2">
+          <h1 className="text-xl md:text-2xl font-bold
+          text-center border-l-4 border-red-800">
             Back-End Development</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
             <img src={javascript} alt="javascript-icon" className='w-10 h-10 rounded-sm icons-hover' />
@@ -83,15 +84,15 @@ const Skills = () => {
             <img src={laravel} alt="laravel-icon" className='w-12 h-12 icons-hover' />
           </div>
         </motion.div>
-        <motion.div className="p-6 rounded-lg  max-w-sm bg-black/20"
+        <motion.div className="p-6 rounded-lg  max-w-sm"
         variants={scaleUp(1.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 1.5 }}>
-          <h1 className="text-2xl font-bold border-b-2 border-[#bf0603]
-          text-center pb-2">
-            Dev Tools</h1>
+          <h1 className="text-xl md:text-2xl font-bold
+          text-center border-l-4 border-red-800">
+            Tools | IDE | Environment</h1>
           <div className='mt-6 flex flex-wrap items-center justify-center gap-4 h-[10rem]'>
             <img src={git} alt="git-icon" className='w-12 h-12 icons-hover'/>
             <img src={github} alt="github-icon" className='w-12 h-12 icons-hover'/>
