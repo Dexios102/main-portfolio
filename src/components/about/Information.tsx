@@ -34,7 +34,7 @@ const Information = () => {
           </motion.span>
           <br className="hidden md:block" />{" "}
           <span className="text-[#370617] dark:text-gray-200">
-            Full Stack Developer!
+            Full Stack Developer
           </span>
         </motion.h1>
         <motion.p
@@ -49,7 +49,7 @@ const Information = () => {
           Biography
         </motion.p>
         <motion.p
-          className="dark:text-gray-300 text-md text-center md:text-left md:max-w-xl"
+          className="dark:text-gray-400 text-md text-center md:text-left md:max-w-xl"
           variants={fadeIn("up", 0.7)}
           initial="hidden"
           whileInView={"show"}
@@ -81,7 +81,7 @@ const Information = () => {
         />
         <motion.div
           className="text-black dark:text-white text-center absolute text-sm
-           top-10 right-2 font-bold rounded-lg bg-white/10 p-4 backdrop-blur-2xl md:text-lg md:px-6"
+           top-10 right-2 font-bold rounded-lg bg-black/10 p-4 backdrop-blur-2xl md:text-lg md:px-6"
           variants={scaleUp(2)}
           initial="hidden"
           whileInView={"show"}
@@ -96,7 +96,7 @@ const Information = () => {
         </motion.div>
         <motion.div
           className="text-black dark:text-white text-center absolute text-sm
-           bottom-28 left-2 font-bold rounded-lg bg-white/10 p-4 backdrop-blur-2xl md:text-lg md:px-6"
+           bottom-28 left-2 font-bold rounded-lg bg-black/10 p-4 backdrop-blur-2xl md:text-lg md:px-6"
           variants={scaleUp(2.5)}
           initial="hidden"
           whileInView={"show"}
