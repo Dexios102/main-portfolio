@@ -7,9 +7,9 @@ import { fadeIn, scaleUp } from "../utils/variants";
 
 import facebook from "../assets/facebook.svg";
 import github from "../assets/github.svg";
-import instagram from "../assets/instagram.png";
+import instagram from "../assets/instagram.svg";
 import linkedin from "../assets/linkedin.svg";
-import x from "../assets/x.png";
+import x from "../assets/x.svg";
 
 const socialMediaLinks = [
   { name: "Facebook", url: import.meta.env.VITE_APP_FACEBOOK, icon: facebook },
@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ setDayMode, isDayMode }) => {
 
   return (
     <header
-      className={`flex justify-between items-center py-6 px-4 sticky top-0
+      className={`flex justify-between items-center py-6 px-4 sticky top-0 z-20
        ${addBackground}`}
     >
       <motion.div

@@ -23,7 +23,7 @@ const App = () => {
     <div className="app h-screen">
       <Background isDayMode={isDayMode} />
       <AnimatePresence mode="wait">
-        <Transitions key={location.pathname} />
+        <Transitions key={location.pathname}/>
         <div className="xl:mx-32">
           <Header setDayMode={setDayMode} isDayMode={isDayMode} />
           <Navbar />
