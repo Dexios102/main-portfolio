@@ -1,4 +1,5 @@
 import { motion, useScroll } from "framer-motion";
+import { fadeIn } from "../../utils/variants";
 import { useRef } from "react";
 import ListBullet from "../ListBullet";
 
@@ -25,8 +26,12 @@ const Details = ({
   flex flex-col items-center justify-between"
     >
       <ListBullet reference={ref}/>
-      <div className="bg-slate-800 rounded-lg p-8">
-        <h3 className="capitalize font-bold text-2xl">
+      <motion.div variants={fadeIn("up", 0.25)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ duration: 1.5 }} className="bg-black/100 rounded-lg p-8">
+        <h3 className="capitalize font-bold text-2xl text-white">
           {position}&nbsp;<a href={companyLink}
           target="_blank"
           className="text-[#bf0603] capitalize">@{company}</a>
@@ -34,8 +39,8 @@ const Details = ({
         <span className="capitalize font-medium text-slate-200">
           {time} | {address}
         </span>
-        <p className="font-medium w-full text-slate-400">{work}</p>
-      </div>
+        <p className="font-medium w-full text-slate-400 mt-4">{work}</p>
+      </motion.div>
     </li>
   );
 };
@@ -47,7 +52,7 @@ const Experience = () => {
   });
   return (
     <div className="mt-20 pb-20">
-      <h1 className="text-5xl md:text-8xl font-bold text-center mb-10">Experience</h1>
+      <h1 className="text-5xl md:text-8xl font-extrabold text-center mb-10">Experience</h1>
       <div className="w-[80%] md:w-[45%] mx-auto relative" ref={ref}>
         <motion.div style={{scaleY: scrollYProgress}}
         className="absolute -left-5 md:-left-[92px] top-0 w-[4px] h-full origin-top bg-slate-800"/>
