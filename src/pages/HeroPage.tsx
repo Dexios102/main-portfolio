@@ -39,7 +39,7 @@ const HeroPage = () => {
     <div className="h-full bg-transparent dark:text-white">
       <div className="w-full h-full">
         <div
-          className="pt-10 text-center flex flex-col justify-center xl:pt-40
+          className="pt-10 text-center flex flex-col justify-center xl:pt-52
         xl:text-left h-full container mx-auto"
         >
           <div className="pl-2 mb-2">

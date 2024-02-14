@@ -14,7 +14,7 @@ const AboutPage = () => {
   });
   return (
     <section className="dark:text-white">
-      <motion.div className="progress-bar" style={{ scaleX }} />
+      <motion.div className="progress-bar z-30" style={{ scaleX }} />
         <Information />
         <Skills />
         <Education />
