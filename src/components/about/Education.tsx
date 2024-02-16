@@ -17,7 +17,8 @@ const Details = ({
     <li ref={ref}
       className="my-4 md:my-8 first:mt-0 last:mb-0 w-[60] mx-auto
   flex flex-col items-center justify-between bg-black/10 rounded-lg p-2 md:p-8
-  backdrop-blur-sm border-l-4 border-gray-500"
+  backdrop-blur-lg border-l-8 border-slate-700 shadow-lg shadow-slate-500
+  dark:shadow-none"
     >
       <ListBullet reference={ref}/>
       <motion.div variants={fadeIn("up", 0.25)}

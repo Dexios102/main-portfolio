@@ -38,7 +38,8 @@ import linux from '../../assets/linux.svg';
 const Skills = () => {
   return (
     <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4
-    bg-black/10 backdrop-blur-sm md:px-10 md:py-6 rounded-xl px-4 py-4">
+    bg-black/10 backdrop-blur-lg md:px-10 md:py-6 rounded-xl px-4 py-4 border-2 border-gray-300
+    dark:border-none shadow-lg shadow-slate-500 dark:shadow-none">
         <motion.div className="p-4 md:p-10 rounded-lg max-w-sm"
         variants={scaleUp(0.5)}
           initial="hidden"

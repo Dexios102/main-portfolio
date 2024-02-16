@@ -10,7 +10,7 @@ const ListBullet: React.FC<ListBulletProps> = ({reference}) => {
         offset: ["center end", "center center"]
     });
   return (
-    <figure className="absolute -left-[75px] md:-left-[147px] dark:stroke-white stroke-red-800">
+    <figure className="absolute -left-[75px] md:-left-[151px] dark:stroke-white stroke-red-800">
         <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
             <circle cx="75" cy="50" r="20" className="stroke-[#bf0603] stoke-1 fill-none" />
             <motion.circle cx="75" cy="50" r="20" className="stroke-[5px] fill-light" 
