@@ -77,6 +77,11 @@ p {
   @apply cursor-pointer;
 }
 
+input {
+  @apply rounded-lg px-2 py-2 text-sm font-medium
+  w-full bg-slate-800 focus:outline-none hover:bg-slate-700
+}
+
 /* Theme Switcher */
 .switch {
   font-size: 17px;
